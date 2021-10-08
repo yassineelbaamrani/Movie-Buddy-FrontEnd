@@ -1,0 +1,39 @@
+<!-- 1. Build out our view (what doe sthe find component look like?)-->
+
+<!-- 2. Add the necessary properties to our component class (component.ts) -->
+    <!-- 2a. add this componet's path to our app-routing.module.ts file -->
+<!-- 3. Inject the userSerrvice INTO out component class, and make an HTTP request
+        based on the id that user passes in  -->
+
+<div>
+    <div>
+        <h2 class="card-header text-center">{{ title }}</h2> <!-- add the title property!-->
+    </div>
+
+    <div class="card-body">
+
+        <h5 class="card-title">Enter the Username of the User to Find:</h5>
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-lg">Username</span>
+            </div>
+            <!--2 way property binding to bind the input to a property that belongs to the component class-->
+            <input [(ngModel)]="username" name="username" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+          </div>
+
+          <button class="btn btn-secondary" (click)="findUserByUsername()">Find</button>
+
+          <div *ngIf="user.id > 0" id="user-info">
+
+            <li class="list-group-item">Id: {{ user.id }}</li>
+            <li class="list-group-item">First Name: {{ user.firstName }}</li>
+            <li class="list-group-item">Last Name: {{ user.lastName }}</li>
+            <li class="list-group-item">Username: {{ user.username }}</li>
+
+          </div>
+
+
+
+    </div>
+
+</div>
