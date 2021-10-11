@@ -1,0 +1,186 @@
+v22.1.0.9:
+    - Fixed "Editing Player" -> "Player Data" script
+    - Added to GUI:
+        - "Transfer Players"
+        - "Match Schedule Editor"
+    - Added scripts to "users scripts" folder:
+        - fix_players_headmodels.lua
+
+v22.1.0.8:
+    - Added "Clone" tab to "Players Editor"
+    - Added to "Non-CM Related":
+        - "Game Settings" -> "Camera"
+        - "Free Fly Camera"
+
+v22.1.0.7:
+    - Update shoe list in "randomize_shoe_models.lua" script
+    - Added "Teams Editor":
+        - Team Info
+        - Formation (Doesn't work in Player Career)
+        - Manager
+        - Kits
+    - Added "Player Contract":
+        - Contract Negotiation
+        - Disable negotiation status checks
+
+v22.1.0.6:
+    - Fixed "Youth Academy" -> Age Range
+    - Added to "Youth Academy":
+        - Generate new report
+        - Generate players with custom ID
+        - Potential Range
+        - 100% chance for 5* weak foot
+        - 100% chance for 5* skill moves
+        - Attribute Modifier Range
+
+v22.1.0.5:
+    - Added "Training":
+        - "Created Player CM" -> "Grade Achieved XP"
+    - Moved "Players Development" to "Training" -> "Manager CM"
+    - Added to "Play As Player":
+        - 999 Skill Points
+    - Fixed assigning release clause to player that don't have one.
+    - Changed "15 Players Per Report" (now it's midfunc hook)
+    - Changed "Reveal Ovr & Pot" (now it's midfunc hook)
+    - Added to "Sharpness"
+        - "Set at 100 on change"
+
+
+v22.1.0.4:
+    - Added "Play As Player"
+        - Positive decision on transfer request
+        - Create Transfer Offer
+    - Added to "Youth Academy"
+        - Settings
+            - Age Range Low
+            - Age Range High
+            - Min Age For Promotion
+        - 15 Players Per Report
+        - Free Missions
+        - Revel Ovr & Pot
+    - Added "Sim Match Settings"
+        - Max Cards
+        - Perc Chance
+        - Perc Drop
+        - Chance Of Red
+        - Chance Of Two Reds
+        - Max Injures
+        - Don't lose Stamina
+        - Base Fatigue
+    - Added "Match Settings"
+        - Change Stadium
+        - Half Length
+        - Time Of Day
+        - Weather
+    - Added "Fitness"
+        - "Set at 100 on change"
+        - "Heal All Players in your team"
+        - "Refill all players energy in your team"
+    - Added "Editing Player"
+        - Player Data
+            - Name
+            - Birthdate
+            - Kit Number
+
+v22.1.0.3:
+    - Added to "Players Editor"
+        - Injury Status
+        - Fitness
+        - Release Clause
+        - Sharpness
+        - Morale
+        - Form
+    - Added "Morale"
+        - Mass edit players morale in team
+    - Added "Form"
+        - Mass edit players form in team
+    - Added "Sharpness"
+        - Mass edit players sharpness in team
+        - Mass edit players sharpness in game
+    - Added "Job Offers"
+        - Club Team
+        - National Team
+    - Added "Manager"
+        - Manager Never Retire
+        - Manager Rating - 99
+        - "Make ManagerID editable"
+    - Added scripts to "users scripts" folder:
+        - "1ovr_99pot.lua"
+        - "99ovr_99pot.lua"
+        - "99ovr_99pot_in_given_team.lua"
+        - "99pot_in_given_team.lua"
+        - "99pot.lua"
+        - "custom_headasset_to_manager.lua"
+        - "custom_headasset_to_playerids.lua"
+        - "custom_tattoos_to_playerids.lua"
+        - "isretiring=0.lua"
+        - "isretiring=1.lua"
+        - "medium_socklenghtcode.lua"
+        - "modifier=0.lua"
+        - "randomize.lua"
+        - "randomize_shoe_models.lua"
+        - "mass_edit_age.lua"
+        - "set_generic_heads.lua"
+        - "set_generic_heads_alt.lua"
+        - "untuck_shirts.lua"
+
+v22.1.0.2:
+    - Fixed default start date (changed year from 2020 to 2021)
+    - Added "Transfer HUB"
+        - Change Release Clause value to 1
+        - Allow Transfer Approach
+        - Allow Loan approach
+    - Added to "Gameplay"
+        - Unlimited Substitutions (USER)
+        - Home Team
+            - Disable Substitutions (CPU)
+        - Away Team
+            - Disable Substitutions (CPU)
+
+v22.1.0.1:
+    - Added "Players Development"
+    - Added "Side Changer" (CPU vs CPU)
+    - Added "Club Finances"
+        - Transfer Budget
+    - Added "Youth Academy"
+        - Send scout to any country
+        - Allow multiple scouts in same country
+    - Added "Hire Scouts"
+        - "Free 5/5 Scouts"
+        - Scout Detailed Info
+    - Added "Free & Unlimited Releasing Players"
+    - Added "Global Transfer Network"
+        - Reveal player data (scouting players not needed)
+    - Added "Non-CM Related":
+        - "Dont Pause Game on AltTab
+    - Added to "Gameplay"
+        - Match Timer
+        - Never Tired Player IDs
+        - Home Team
+            - Injured players
+            - 5 stars skill moves
+            - NeverTired players
+            - Tired players
+            - Goals scored
+        - Away Team
+            - Injured players
+            - 5 stars skill moves
+            - NeverTired players
+            - Tired players
+            - Goals scored
+
+v22.1.0.0:
+    - Added "Players Editor" (basic, without fitness, sharpness, morale, player contract etc.)
+    - Added "Database Tables":
+        - Players Table
+        - Editedplayernames Table
+        - Dcplayernames Table
+        - Teamplayerlinks Table
+        - Teams Table
+        - Leagueteamlinks Table
+        - Manager Table
+        - career_calendar Table
+        - career_users Table
+        - career_playercontract Table
+        - default_mentalities Table
+        - default_teamsheets Table

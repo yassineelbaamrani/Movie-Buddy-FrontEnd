@@ -1,0 +1,241 @@
+[ INFO ] Sun Oct 10 17:47:29 2021 - ================================
+[ INFO ] Sun Oct 10 17:47:29 2021 - =========== INITIALIZE =========
+[ INFO ] Sun Oct 10 17:47:29 2021 - ================================
+[ INFO ] Sun Oct 10 17:47:29 2021 - os.getenv('HOMEDRIVE') C:
+[ INFO ] Sun Oct 10 17:47:29 2021 - os.getenv('SystemDrive') C:
+[ INFO ] Sun Oct 10 17:47:29 2021 - HOMEDRIVE: C:
+[ INFO ] Sun Oct 10 17:47:30 2021 - Using cwd Config
+[ INFO ] Sun Oct 10 17:47:30 2021 - Loading CFG_DATA from config.ini
+[ INFO ] Sun Oct 10 17:47:30 2021 - Loading OFFSETS_DATA from offsets.ini
+[ INFO ] Sun Oct 10 17:47:30 2021 - Setup Form Manager: playerseditor_form
+[ INFO ] Sun Oct 10 17:47:30 2021 - Setup Form Manager: settings_form
+[ INFO ] Sun Oct 10 17:47:30 2021 - Setup Form Manager: newmatchfix_form
+[ INFO ] Sun Oct 10 17:47:30 2021 - Setup Form Manager: teamseditor_form
+[ INFO ] Sun Oct 10 17:47:30 2021 - Resize teams editor: teamseditor_form
+[ INFO ] Sun Oct 10 17:47:30 2021 - Setup Form Manager: matchscheduleeditor_form
+[ INFO ] Sun Oct 10 17:47:30 2021 - Setup Form Manager: transferplayers_form
+[ INFO ] Sun Oct 10 17:47:30 2021 - Setup Form Manager: main_form
+[ INFO ] Sun Oct 10 17:47:30 2021 - Setup Form Manager: matchfixing_form
+[ INFO ] Sun Oct 10 17:47:30 2021 - Setup Form Manager: findteam_form
+[ INFO ] Sun Oct 10 17:47:30 2021 - Setup Form Manager: findplayer_form
+[ INFO ] Sun Oct 10 17:47:30 2021 - Cheat engine version: 7.300000
+[ INFO ] Sun Oct 10 17:47:30 2021 - Cheat Table version: 22.1.0.6
+[ INFO ] Sun Oct 10 17:47:30 2021 - Searching for game process
+[ INFO ] Sun Oct 10 17:47:52 2021 - Attached to FIFA22.exe (PID: 42136)
+[ INFO ] Sun Oct 10 17:47:53 2021 - Patrons ver -  22.1.0.9, free ver - 
+22.1.0.6
+[ INFO ] Sun Oct 10 17:47:54 2021 - AOBScanModule, pattern for ScreenID
+[ INFO ] Sun Oct 10 17:47:54 2021 - 4C 8D 3D ?? ?? ?? ?? C1 E8 07 49 8B F4 A8 01 4C 0F 45 3D
+[ INFO ] Sun Oct 10 17:47:54 2021 - Module_size FIFA22.exe, 2678C000
+[ INFO ] Sun Oct 10 17:47:54 2021 - 140000000 - 16678C000
+[ INFO ] Sun Oct 10 17:47:54 2021 - New Offset for ScreenID - 0x15C19A2
+[ INFO ] Sun Oct 10 17:47:54 2021 - Saving Offsets to offsets.ini
+[ INFO ] Sun Oct 10 17:47:54 2021 - Current Screen: nil
+[ INFO ] Sun Oct 10 17:47:54 2021 - Waiting for valid screen
+[ INFO ] Sun Oct 10 17:48:47 2021 - Current Screen: mainhubG5cfg
+[ INFO ] Sun Oct 10 17:48:47 2021 - Loading playernames: other/playernames.csv
+[ INFO ] Sun Oct 10 17:48:47 2021 - Playernames loaded.
+[ INFO ] Sun Oct 10 17:48:47 2021 - Saving Config to config.ini
+[ INFO ] Sun Oct 10 17:48:47 2021 - Activating Globals (14)
+[ INFO ] Sun Oct 10 17:48:47 2021 - Activating Scripts (18)
+[ INFO ] Sun Oct 10 17:48:47 2021 - Activating Hidden FIFA DB Tables (214)
+[ INFO ] Sun Oct 10 17:48:47 2021 - AOBScanModule, pattern for fnGetColData
+[ INFO ] Sun Oct 10 17:48:47 2021 - 40 53 48 83 EC 30 4C 8B D2 4D 8B D8 8B 12 8D 42 FD 83 F8 01
+[ INFO ] Sun Oct 10 17:48:47 2021 - Module_size FIFA22.exe, 2678C000
+[ INFO ] Sun Oct 10 17:48:47 2021 - 140000000 - 16678C000
+[ INFO ] Sun Oct 10 17:48:48 2021 - New Offset for fnGetColData - 0x2F35C20
+[ INFO ] Sun Oct 10 17:48:48 2021 - Saving Offsets to offsets.ini
+[ INFO ] Sun Oct 10 17:48:48 2021 - Activating Scripts (18)
+[ INFO ] Sun Oct 10 17:48:48 2021 - Activating Hidden FIFA DB Tables (214)
+[ INFO ] Sun Oct 10 17:48:48 2021 - AOBScanModule, pattern for DatabaseBasePtr
+[ INFO ] Sun Oct 10 17:48:48 2021 - 48 0F 44 2D ?? ?? ?? ?? 45 33 FF 8B 4D 08 8B F1 0F AF 75 00 8D 41 01
+[ INFO ] Sun Oct 10 17:48:48 2021 - Module_size FIFA22.exe, 2678C000
+[ INFO ] Sun Oct 10 17:48:48 2021 - 140000000 - 16678C000
+[ INFO ] Sun Oct 10 17:48:48 2021 - New Offset for DatabaseBasePtr - 0x2F3B7EF
+[ INFO ] Sun Oct 10 17:48:48 2021 - Saving Offsets to offsets.ini
+[ INFO ] Sun Oct 10 17:48:48 2021 - AOBScanModule, pattern for pModeManagers
+[ INFO ] Sun Oct 10 17:48:48 2021 - 4C 89 3D ?? ?? ?? ?? 48 89 3D ?? ?? ?? ?? EB 03 48 8B C3
+[ INFO ] Sun Oct 10 17:48:48 2021 - Module_size FIFA22.exe, 2678C000
+[ INFO ] Sun Oct 10 17:48:48 2021 - 140000000 - 16678C000
+[ INFO ] Sun Oct 10 17:48:49 2021 - New Offset for pModeManagers - 0x621FD58
+[ INFO ] Sun Oct 10 17:48:49 2021 - Saving Offsets to offsets.ini
+[ INFO ] Sun Oct 10 17:48:49 2021 - AOBScanModule, pattern for fnGenYAReport
+[ INFO ] Sun Oct 10 17:48:49 2021 - 40 55 57 48 8D 6C 24 ?? 48 81 EC ?? ?? ?? ?? 48 8B 01 48 8B F9 FF 50 08 84 C0 0F 84 ?? ?? ?? ?? 48 8B 57 08 48 89 9C 24 ?? ?? ?? ?? 4C 89 B4 24 ?? ?? ?? ??
+[ INFO ] Sun Oct 10 17:48:49 2021 - Module_size FIFA22.exe, 2678C000
+[ INFO ] Sun Oct 10 17:48:49 2021 - 140000000 - 16678C000
+[ INFO ] Sun Oct 10 17:48:49 2021 - New Offset for fnGenYAReport - 0x5E7F6A0
+[ INFO ] Sun Oct 10 17:48:49 2021 - Saving Offsets to offsets.ini
+[ INFO ] Sun Oct 10 17:48:49 2021 - load_img: heads/p41.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/heads/p41.png
+[ INFO ] Sun Oct 10 17:48:50 2021 - load_img: crest/l1.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/crest/dark/l1.png
+[ INFO ] Sun Oct 10 17:48:50 2021 - Ready to use.
+[ INFO ] Sun Oct 10 17:49:15 2021 - Veryfing DatabaseBasePtr offset
+[ INFO ] Sun Oct 10 17:49:15 2021 - addres_to_check 142F3B7EF, aob: 48 0F 44 2D ?? ?? ?? ?? 45 33 FF 8B 4D 08 8B F1 0F AF 75 00 8D 41 01
+[ INFO ] Sun Oct 10 17:49:15 2021 - Veryfing DatabaseBasePtr offset success
+[ INFO ] Sun Oct 10 17:49:15 2021 - Veryfing pModeManagers offset
+[ INFO ] Sun Oct 10 17:49:15 2021 - addres_to_check 14621FD58, aob: 4C 89 3D ?? ?? ?? ?? 48 89 3D ?? ?? ?? ?? EB 03 48 8B C3
+[ INFO ] Sun Oct 10 17:49:15 2021 - Veryfing pModeManagers offset success
+[ INFO ] Sun Oct 10 17:49:16 2021 - Cache Player Names
+[ INFO ] Sun Oct 10 17:49:16 2021 - Cache Player Names Done
+[ ERROR ] Sun Oct 10 17:49:16 2021 - headtypecode not found, 34
+[ WARNING ] Sun Oct 10 17:49:16 2021 - Invalid value: HeadTypeCodeCB
+[ INFO ] Sun Oct 10 17:49:16 2021 - load_img: youthheads/p2003402.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/youthheads/p2003402.png
+[ INFO ] Sun Oct 10 17:49:16 2021 - load_img: crest/l115486.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/crest/dark/l115486.png
+[ INFO ] Sun Oct 10 17:49:17 2021 - load_img: crest/notfound.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/common/crest/notfound.png
+[ INFO ] Sun Oct 10 17:49:56 2021 - Veryfing DatabaseBasePtr offset
+[ INFO ] Sun Oct 10 17:49:56 2021 - addres_to_check 142F3B7EF, aob: 48 0F 44 2D ?? ?? ?? ?? 45 33 FF 8B 4D 08 8B F1 0F AF 75 00 8D 41 01
+[ INFO ] Sun Oct 10 17:49:56 2021 - Veryfing DatabaseBasePtr offset success
+[ INFO ] Sun Oct 10 17:49:56 2021 - Veryfing pModeManagers offset
+[ INFO ] Sun Oct 10 17:49:56 2021 - addres_to_check 14621FD58, aob: 4C 89 3D ?? ?? ?? ?? 48 89 3D ?? ?? ?? ?? EB 03 48 8B C3
+[ INFO ] Sun Oct 10 17:49:56 2021 - Veryfing pModeManagers offset success
+[ INFO ] Sun Oct 10 17:49:56 2021 - Cache Player Names
+[ INFO ] Sun Oct 10 17:49:56 2021 - Cache Player Names Done
+[ INFO ] Sun Oct 10 17:49:56 2021 - load_img: youthheads/p4152001.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/youthheads/p4152001.png
+[ INFO ] Sun Oct 10 17:49:56 2021 - load_img: crest/l115486.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/crest/dark/l115486.png
+[ INFO ] Sun Oct 10 17:49:57 2021 - load_img: crest/notfound.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/common/crest/notfound.png
+[ INFO ] Sun Oct 10 17:50:05 2021 - Veryfing DatabaseBasePtr offset
+[ INFO ] Sun Oct 10 17:50:05 2021 - addres_to_check 142F3B7EF, aob: 48 0F 44 2D ?? ?? ?? ?? 45 33 FF 8B 4D 08 8B F1 0F AF 75 00 8D 41 01
+[ INFO ] Sun Oct 10 17:50:05 2021 - Veryfing DatabaseBasePtr offset success
+[ INFO ] Sun Oct 10 17:50:05 2021 - Veryfing pModeManagers offset
+[ INFO ] Sun Oct 10 17:50:05 2021 - addres_to_check 14621FD58, aob: 4C 89 3D ?? ?? ?? ?? 48 89 3D ?? ?? ?? ?? EB 03 48 8B C3
+[ INFO ] Sun Oct 10 17:50:05 2021 - Veryfing pModeManagers offset success
+[ INFO ] Sun Oct 10 17:50:05 2021 - Cache Player Names
+[ INFO ] Sun Oct 10 17:50:05 2021 - Cache Player Names Done
+[ INFO ] Sun Oct 10 17:50:06 2021 - load_img: heads/p279999.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/heads/p279999.png
+[ INFO ] Sun Oct 10 17:50:06 2021 - load_img: heads/notfound.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/common/heads/notfound.png
+[ INFO ] Sun Oct 10 17:50:06 2021 - load_img: crest/l115486.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/crest/dark/l115486.png
+[ INFO ] Sun Oct 10 17:50:06 2021 - load_img: crest/notfound.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/common/crest/notfound.png
+[ INFO ] Sun Oct 10 17:51:47 2021 - Apply Changes player
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (shotpower) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (shortpassing) for playerid: 279999 at 0x5D7CADC8. new_val = 88
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (strength) for playerid: 279999 at 0x5D7CADC8. new_val = 98
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (aggression) for playerid: 279999 at 0x5D7CADC8. new_val = 84
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (agility) for playerid: 279999 at 0x5D7CADC8. new_val = 95
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (marking) for playerid: 279999 at 0x5D7CADC8. new_val = 78
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (slidingtackle) for playerid: 279999 at 0x5D7CADC8. new_val = 88
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (acceleration) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (longshots) for playerid: 279999 at 0x5D7CADC8. new_val = 96
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (penalties) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (standingtackle) for playerid: 279999 at 0x5D7CADC8. new_val = 79
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (balance) for playerid: 279999 at 0x5D7CADC8. new_val = 91
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (reactions) for playerid: 279999 at 0x5D7CADC8. new_val = 88
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (vision) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (longpassing) for playerid: 279999 at 0x5D7CADC8. new_val = 87
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (headingaccuracy) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (composure) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (positioning) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (volleys) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (finishing) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (crossing) for playerid: 279999 at 0x5D7CADC8. new_val = 88
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (jumping) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (interceptions) for playerid: 279999 at 0x5D7CADC8. new_val = 72
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (freekickaccuracy) for playerid: 279999 at 0x5D7CADC8. new_val = 98
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (stamina) for playerid: 279999 at 0x5D7CADC8. new_val = 92
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (sprintspeed) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (curve) for playerid: 279999 at 0x5D7CADC8. new_val = 98
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (dribbling) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:47 2021 - update_xp_in_player_growth_system (ballcontrol) for playerid: 279999 at 0x5D7CADC8. new_val = 99
+[ INFO ] Sun Oct 10 17:51:48 2021 - Player with ID 279999 has been edited
+[ INFO ] Sun Oct 10 17:54:13 2021 - Apply Changes player
+[ INFO ] Sun Oct 10 17:54:14 2021 - Player with ID 279999 has been edited
+[ INFO ] Sun Oct 10 17:54:24 2021 - Veryfing DatabaseBasePtr offset
+[ INFO ] Sun Oct 10 17:54:24 2021 - addres_to_check 142F3B7EF, aob: 48 0F 44 2D ?? ?? ?? ?? 45 33 FF 8B 4D 08 8B F1 0F AF 75 00 8D 41 01
+[ INFO ] Sun Oct 10 17:54:24 2021 - Veryfing DatabaseBasePtr offset success
+[ INFO ] Sun Oct 10 17:54:24 2021 - Veryfing pModeManagers offset
+[ INFO ] Sun Oct 10 17:54:24 2021 - addres_to_check 14621FD58, aob: 4C 89 3D ?? ?? ?? ?? 48 89 3D ?? ?? ?? ?? EB 03 48 8B C3
+[ INFO ] Sun Oct 10 17:54:24 2021 - Veryfing pModeManagers offset success
+[ INFO ] Sun Oct 10 17:54:24 2021 - Cache Player Names
+[ INFO ] Sun Oct 10 17:54:24 2021 - Cache Player Names Done
+[ INFO ] Sun Oct 10 17:54:24 2021 - load_img: youthheads/p9100506.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/youthheads/p9100506.png
+[ INFO ] Sun Oct 10 17:54:25 2021 - load_img: crest/l115486.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/crest/dark/l115486.png
+[ INFO ] Sun Oct 10 17:54:25 2021 - load_img: crest/notfound.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/common/crest/notfound.png
+[ INFO ] Sun Oct 10 17:55:38 2021 - Apply Changes player
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (shotpower) for playerid: 280562 at 0x5D7CA408. new_val = 99
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (shortpassing) for playerid: 280562 at 0x5D7CA408. new_val = 99
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (strength) for playerid: 280562 at 0x5D7CA408. new_val = 85
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (aggression) for playerid: 280562 at 0x5D7CA408. new_val = 93
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (agility) for playerid: 280562 at 0x5D7CA408. new_val = 98
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (marking) for playerid: 280562 at 0x5D7CA408. new_val = 83
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (slidingtackle) for playerid: 280562 at 0x5D7CA408. new_val = 90
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (acceleration) for playerid: 280562 at 0x5D7CA408. new_val = 90
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (skillmoves) for playerid: 280562 at 0x5D7CA408. new_val = 5
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (longshots) for playerid: 280562 at 0x5D7CA408. new_val = 97
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (standingtackle) for playerid: 280562 at 0x5D7CA408. new_val = 95
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (balance) for playerid: 280562 at 0x5D7CA408. new_val = 98
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (reactions) for playerid: 280562 at 0x5D7CA408. new_val = 99
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (vision) for playerid: 280562 at 0x5D7CA408. new_val = 97
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (longpassing) for playerid: 280562 at 0x5D7CA408. new_val = 94
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (headingaccuracy) for playerid: 280562 at 0x5D7CA408. new_val = 93
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (composure) for playerid: 280562 at 0x5D7CA408. new_val = 99
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (positioning) for playerid: 280562 at 0x5D7CA408. new_val = 94
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (finishing) for playerid: 280562 at 0x5D7CA408. new_val = 94
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (crossing) for playerid: 280562 at 0x5D7CA408. new_val = 91
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (jumping) for playerid: 280562 at 0x5D7CA408. new_val = 99
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (weakfootabilitytypecode) for playerid: 280562 at 0x5D7CA408. new_val = 4
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (freekickaccuracy) for playerid: 280562 at 0x5D7CA408. new_val = 99
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (stamina) for playerid: 280562 at 0x5D7CA408. new_val = 99
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (sprintspeed) for playerid: 280562 at 0x5D7CA408. new_val = 99
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (penalties) for playerid: 280562 at 0x5D7CA408. new_val = 91
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (curve) for playerid: 280562 at 0x5D7CA408. new_val = 99
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (dribbling) for playerid: 280562 at 0x5D7CA408. new_val = 99
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (interceptions) for playerid: 280562 at 0x5D7CA408. new_val = 97
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (volleys) for playerid: 280562 at 0x5D7CA408. new_val = 86
+[ INFO ] Sun Oct 10 17:55:38 2021 - update_xp_in_player_growth_system (ballcontrol) for playerid: 280562 at 0x5D7CA408. new_val = 96
+[ INFO ] Sun Oct 10 17:55:38 2021 - save_player_fitness no space
+[ INFO ] Sun Oct 10 17:55:39 2021 - Player with ID 280562 has been edited
+[ INFO ] Sun Oct 10 17:55:46 2021 - Veryfing DatabaseBasePtr offset
+[ INFO ] Sun Oct 10 17:55:46 2021 - addres_to_check 142F3B7EF, aob: 48 0F 44 2D ?? ?? ?? ?? 45 33 FF 8B 4D 08 8B F1 0F AF 75 00 8D 41 01
+[ INFO ] Sun Oct 10 17:55:46 2021 - Veryfing DatabaseBasePtr offset success
+[ INFO ] Sun Oct 10 17:55:46 2021 - Veryfing pModeManagers offset
+[ INFO ] Sun Oct 10 17:55:46 2021 - addres_to_check 14621FD58, aob: 4C 89 3D ?? ?? ?? ?? 48 89 3D ?? ?? ?? ?? EB 03 48 8B C3
+[ INFO ] Sun Oct 10 17:55:46 2021 - Veryfing pModeManagers offset success
+[ INFO ] Sun Oct 10 17:55:46 2021 - Cache Player Names
+[ INFO ] Sun Oct 10 17:55:46 2021 - Cache Player Names Done
+[ INFO ] Sun Oct 10 17:55:46 2021 - load_img: youthheads/p9100506.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/youthheads/p9100506.png
+[ INFO ] Sun Oct 10 17:55:46 2021 - load_img: crest/l115486.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/crest/dark/l115486.png
+[ INFO ] Sun Oct 10 17:55:47 2021 - load_img: crest/notfound.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/common/crest/notfound.png
+[ INFO ] Sun Oct 10 17:56:04 2021 - Veryfing DatabaseBasePtr offset
+[ INFO ] Sun Oct 10 17:56:04 2021 - addres_to_check 142F3B7EF, aob: 48 0F 44 2D ?? ?? ?? ?? 45 33 FF 8B 4D 08 8B F1 0F AF 75 00 8D 41 01
+[ INFO ] Sun Oct 10 17:56:04 2021 - Veryfing DatabaseBasePtr offset success
+[ INFO ] Sun Oct 10 17:56:04 2021 - Veryfing pModeManagers offset
+[ INFO ] Sun Oct 10 17:56:04 2021 - addres_to_check 14621FD58, aob: 4C 89 3D ?? ?? ?? ?? 48 89 3D ?? ?? ?? ?? EB 03 48 8B C3
+[ INFO ] Sun Oct 10 17:56:04 2021 - Veryfing pModeManagers offset success
+[ INFO ] Sun Oct 10 17:56:04 2021 - Cache Player Names
+[ INFO ] Sun Oct 10 17:56:05 2021 - Cache Player Names Done
+[ INFO ] Sun Oct 10 17:56:05 2021 - load_img: youthheads/p2201304.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/youthheads/p2201304.png
+[ INFO ] Sun Oct 10 17:56:05 2021 - load_img: crest/l115486.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/22/crest/dark/l115486.png
+[ INFO ] Sun Oct 10 17:56:05 2021 - load_img: crest/notfound.png, https://fifatracker-cdn.fra1.digitaloceanspaces.com/img/assets/common/crest/notfound.png
+[ INFO ] Sun Oct 10 17:56:41 2021 - Apply Changes player
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (shotpower) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (shortpassing) for playerid: 281837 at 0x5D7CA678. new_val = 95
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (freekickaccuracy) for playerid: 281837 at 0x5D7CA678. new_val = 93
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (aggression) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (agility) for playerid: 281837 at 0x5D7CA678. new_val = 97
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (marking) for playerid: 281837 at 0x5D7CA678. new_val = 54
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (slidingtackle) for playerid: 281837 at 0x5D7CA678. new_val = 34
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (interceptions) for playerid: 281837 at 0x5D7CA678. new_val = 53
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (skillmoves) for playerid: 281837 at 0x5D7CA678. new_val = 5
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (longshots) for playerid: 281837 at 0x5D7CA678. new_val = 96
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (standingtackle) for playerid: 281837 at 0x5D7CA678. new_val = 43
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (balance) for playerid: 281837 at 0x5D7CA678. new_val = 87
+[ INFO ] Sun Oct 10 17:56:41 2021 - update_xp_in_player_growth_system (reactions) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (vision) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (longpassing) for playerid: 281837 at 0x5D7CA678. new_val = 86
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (headingaccuracy) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (composure) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (positioning) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (finishing) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (penalties) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (jumping) for playerid: 281837 at 0x5D7CA678. new_val = 94
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (strength) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (stamina) for playerid: 281837 at 0x5D7CA678. new_val = 93
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (sprintspeed) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (ballcontrol) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (curve) for playerid: 281837 at 0x5D7CA678. new_val = 93
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (dribbling) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (crossing) for playerid: 281837 at 0x5D7CA678. new_val = 84
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (volleys) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - update_xp_in_player_growth_system (acceleration) for playerid: 281837 at 0x5D7CA678. new_val = 99
+[ INFO ] Sun Oct 10 17:56:42 2021 - save_player_fitness no space
+[ INFO ] Sun Oct 10 17:56:43 2021 - Player with ID 281837 has been edited
+[ INFO ] Sun Oct 10 18:48:30 2021 - Deactivating all scripts
+[ INFO ] Sun Oct 10 18:48:30 2021 - Deactivated all scripts
