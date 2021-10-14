@@ -2,12 +2,16 @@ import { ClientMessage } from './../../models/client-message';
 import { UserService } from './../../services/user.service';
 import { User, Address } from './../../models/user';
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
+const REGISTER_API = 'http://localhost:5000/api/users/add';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+@Injectable()
 export class RegisterComponent {
 
   title = 'Register User';
@@ -16,14 +20,15 @@ export class RegisterComponent {
   public user = new User(0,'', '', '', '', '', [])
   public address = new Address('', '', '', '')
   public clientMessage = new ClientMessage('');
-
+ 
   // inject the UserService into this component
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private http: HttpClient) { }
 
   public registerUser(): void {
   
     // push the address object captured into the User's address's []
     this.user.addresses.push(this.address);
+    this.user.addresses.push(REGISTER_API);
 
     // call this.userService.registerUser() method and post it **
     this.userService.registerUser(this.user)
