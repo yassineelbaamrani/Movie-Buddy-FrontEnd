@@ -33,6 +33,10 @@ export class MainComponent implements OnInit {
     this.router.navigate(['/remove']);
 
   }
+  public gotoLogin() {
+    this.router.navigate(['/login']);
+
+  }
 
 }
 

@@ -74,12 +74,12 @@ export class UserService { // this service is only responsible for one thing: ma
     let tempUser = this.findByUsername(username)
       .subscribe(data => this.user = data)
 
-    if (this.user.password === password) {
+    if (this.user.password == password) {
 
       return this.http.post(`${url}/main/`, { username, password })
       .pipe(catchError(this.handleError));
     } else {
-      return this.http.post(`${url}/login/`, { username, password })
+      return this.http.post(`${url}/login/`, null)
       .pipe(catchError(this.handleError));
     }
 
