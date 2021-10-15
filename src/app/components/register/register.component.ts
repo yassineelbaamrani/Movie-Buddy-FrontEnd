@@ -28,8 +28,7 @@ export class RegisterComponent {
   
     // push the address object captured into the User's address's []
     this.user.addresses.push(this.address);
-    this.user.addresses.push(REGISTER_API);
-
+    
     // call this.userService.registerUser() method and post it **
     this.userService.registerUser(this.user)
       .subscribe( // subscribe to the data returned and do something like generate client message

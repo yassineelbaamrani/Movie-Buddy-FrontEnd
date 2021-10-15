@@ -5,6 +5,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from "@angular/common/http
 // we must import HttpClientModule in the app.module.ts
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
+import { Router } from '@angular/router';
 
 
 const url = `${awsUrl}/users`;
@@ -17,12 +18,13 @@ const url = `${awsUrl}/users`;
 export class UserService { // this service is only responsible for one thing: making HTTP requests to a server
 
   // we need to inject this service with HttpClient
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   // we need to append Headers to all requests
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
+  user = new User(0, '', '', '', '', '', [])
 
   // POST
   public registerUser(user: User): Observable<User> {
@@ -62,6 +64,25 @@ export class UserService { // this service is only responsible for one thing: ma
       .pipe(
         catchError(this.handleError)
       )
+  }
+
+
+  //user find my username of example, ifstatement to compare is password inputted is equal to password associated with user found by username passed in if user doesnt exist reroute back to same page and say login failed.
+  //return password to check validity make change
+  public login(username: string, password: string): Observable<any> {
+
+    let tempUser = this.findByUsername(username)
+      .subscribe(data => this.user = data)
+
+    if (this.user.password === password) {
+
+      return this.http.post(`${url}/main/`, { username, password })
+      .pipe(catchError(this.handleError));
+    } else {
+      return this.http.post(`${url}/login/`, { username, password })
+      .pipe(catchError(this.handleError));
+    }
+
   }
 
   // DELETE
