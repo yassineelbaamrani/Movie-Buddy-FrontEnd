@@ -1,5 +1,6 @@
+import { User } from 'src/app/models/user';
+import { FindComponent } from './../components/find/find.component';
 import { awsUrl } from './../../environments/environment';
-import { User } from './../models/user';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from "@angular/common/http";
 // we must import HttpClientModule in the app.module.ts
@@ -7,7 +8,7 @@ import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { Router } from '@angular/router';
 
-
+const localURL= `http://localhost:5000/api/users/`
 const url = `${awsUrl}/users`;
 
 // we will inject this service into the components that call its methods
@@ -24,18 +25,31 @@ export class UserService { // this service is only responsible for one thing: ma
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
-  user = new User(0, '', '', '', '', '', [])
+  user = new User(0, '', '', '', '', '')
 
   // POST
   public registerUser(user: User): Observable<User> {
 
     // from http://localhost:4200 -> http://localhost:5000/api/users/add OR http://api-env.eba-udukpxjr.us-east-2.elasticbeanstalk.com/api/users/add
     // my Spring controller accepts post requests at http://api-env.eba-udukpxjr.us-east-2.elasticbeanstalk.com/api/users/add
-    return this.http.post<User>(`${url}/add`, user, this.httpOptions) // url, user, this.httpOptions
+    
+    
+    return this.http.post<User>(`${localURL}add`, user, this.httpOptions) // url, user, this.httpOptions
       .pipe( // we are calling a method on the data returned in the observable
         catchError(this.handleError) // passing a callback
       )
   }
+
+  //user find my username of example, ifstatement to compare is password inputted is equal to password associated with user found by username passed in if user doesnt exist reroute back to same page and say login failed.
+  //return password to check validity make change
+  public login(username: string, password: string): Observable<User> {
+
+    return this.http.get<User>(`${url}/find/${username}`)
+      .pipe(catchError(this.handleError));
+     
+
+  }
+
 
   // GET
   public findAllUsers(): Observable<User[]> {  // An Observable  is a stream of values that wil be returned at over
@@ -66,24 +80,6 @@ export class UserService { // this service is only responsible for one thing: ma
       )
   }
 
-
-  //user find my username of example, ifstatement to compare is password inputted is equal to password associated with user found by username passed in if user doesnt exist reroute back to same page and say login failed.
-  //return password to check validity make change
-  public login(username: string, password: string): Observable<any> {
-
-    let tempUser = this.findByUsername(username)
-      .subscribe(data => this.user = data)
-
-    if (this.user.password == password) {
-
-      return this.http.post(`${url}/main/`, { username, password })
-      .pipe(catchError(this.handleError));
-    } else {
-      return this.http.post(`${url}/login/`, null)
-      .pipe(catchError(this.handleError));
-    }
-
-  }
 
   // DELETE
   deleteUser(id: number) {

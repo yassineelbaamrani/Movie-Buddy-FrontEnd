@@ -12,7 +12,7 @@ export class FindComponent {
   title = "Find User"
   userId: number = 0; // initialize to zero, then it will be updated 
   username: string = '';
-  user = new User(0, '', '', '', '', '', [])
+  user = new User(0, '', '', '', '', '')
 
   // inject UserService into this class
   constructor(private userService: UserService) { }

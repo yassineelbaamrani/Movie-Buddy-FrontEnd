@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'all', component: AllComponent},
   { path: 'find', component: FindComponent},
   { path: 'remove', component: RemoveComponent},
-  { path: '**', component: MainComponent} // this is a Wild Card Route to handle HAS TO BE LAST
+  { path: '**', component: LoginComponent} // this is a Wild Card Route to handle HAS TO BE LAST
 
 ];
 
