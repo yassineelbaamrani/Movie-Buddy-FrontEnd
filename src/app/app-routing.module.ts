@@ -1,3 +1,4 @@
+import { LoginComponent } from './components/login/login.component';
 import { RemoveComponent } from './components/remove/remove.component';
 import { AllComponent } from './components/all/all.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   // all of these components will be rendered at url localhost:4200/x -> wherever the <routeroutlet> is placed
   { path: '', component: MainComponent },
   { path: 'main', component: MainComponent },   // the path specifies http:/localhost:4200/main
+  { path: 'login',component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'all', component: AllComponent},
   { path: 'find', component: FindComponent},
