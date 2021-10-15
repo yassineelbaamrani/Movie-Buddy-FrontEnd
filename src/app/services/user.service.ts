@@ -43,8 +43,7 @@ export class UserService { // this service is only responsible for one thing: ma
   //user find my username of example, ifstatement to compare is password inputted is equal to password associated with user found by username passed in if user doesnt exist reroute back to same page and say login failed.
   //return password to check validity make change
   public login(username: string, password: string): Observable<User> {
-
-    return this.http.get<User>(`${url}/find/${username}`)
+    return this.http.get<User>(`${localURL}find/${username}`)
       .pipe(catchError(this.handleError));
      
 
