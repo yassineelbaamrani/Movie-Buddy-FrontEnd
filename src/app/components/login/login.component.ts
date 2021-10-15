@@ -23,12 +23,18 @@ export class LoginComponent implements OnInit {
   }
 
   public login() {
-console.log(this.user.username)
+
   this.userService.login(this.user.username, this.user.password)
       .subscribe(
+      
         data => {
+          if (this.user.password==data.password){
           this.clientMessage.message = `Successful login ${data.username}`,   // console.log(`successfully logged in ${data.firstName}`)
-          this.router.navigate(['/main']);
+          this.router.navigate(['/main']);}
+          else{
+            this.clientMessage.message = `Unsuccessful login, password incorrect. ${data.username}`,
+            this.router.navigate(['/login']);
+          }
       },
       error => {
             this.clientMessage.message = `Something went wrong. Error: ${error}` // console.error(`We got an error: ${error}` 
