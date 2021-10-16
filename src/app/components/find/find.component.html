@@ -5,35 +5,37 @@
 <!-- 3. Inject the userSerrvice INTO out component class, and make an HTTP request
         based on the id that user passes in  -->
 
-<div>
-    <div>
-        <h2 class="card-header text-center">{{ title }}</h2> <!-- add the title property!-->
-    </div>
-
-    <div class="card-body">
-
-        <h5 class="card-title">Enter the Username of the User to Find:</h5>
-        <div class="input-group input-group-lg">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-lg">Username</span>
-            </div>
-            <!--2 way property binding to bind the input to a property that belongs to the component class-->
-            <input [(ngModel)]="username" name="username" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+        <div>
+          <div>
+              <h2 class="card-header text-center">{{ title }}</h2> <!-- add the title property!-->
           </div>
-
-          <button class="btn btn-secondary" (click)="findUserByUsername()">Find</button>
-
-          <div *ngIf="user.id > 0" id="user-info">
-
-            <li class="list-group-item">Id: {{ user.id }}</li>
-            <li class="list-group-item">First Name: {{ user.firstName }}</li>
-            <li class="list-group-item">Last Name: {{ user.lastName }}</li>
-            <li class="list-group-item">Username: {{ user.username }}</li>
-
+      
+          <div class="card-body">
+      
+              <h5 class="card-title text-center">Search for your favorite movies by title:</h5>
+              <div class="input-group input-group-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Movie Title:</span>
+                  </div>
+                  <!--2 way property binding to bind the input to a property that belongs to the component class-->
+                  <input [(ngModel)]="title" name="title" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                </div>
+      
+                <button class="btn btn-secondary" (click)="findMovieByTitle()">Find</button>
+      
+                <!-- I want to iterate through all the User elements within the users property of this compoennt and render them -->
+                <ul *ngFor="let m of movies" class="list-group">
+      
+                  <li class="list-group-item">Id: {{ m.tmdb_id }}</li>
+                  <li class="list-group-item">Title: {{ m.title }}</li>
+                  <li class="list-group-item">Year: {{ m.year }}</li>
+                  <li class="list-group-item">Genre: {{ m.genre }}</li>
+                  <li class="list-group-item">Rating: {{ m.rating }}</li>
+                  <li class="list-group-item">Description: {{ m.description }}</li>
+                  <li class="list-group-item">{{ m.img }}</li>
+      
+                </ul>
+      
           </div>
-
-
-
-    </div>
-
-</div>
+      
+      </div>
