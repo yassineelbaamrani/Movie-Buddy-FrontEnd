@@ -12,20 +12,21 @@ export class FindComponent {
 
   title = "Find Movies"
   public movies: Movie[] = [];
-
+  movie = new Movie(0,'','','',0,'','')
   public clientMessage: ClientMessage = new ClientMessage('Sorry, no movies to display...');
 
-  // inject UserService into this class
+  // inject MovieService into this class
   constructor(private movieService: MovieService) { }
 
   public findMovieByTitle() {
 
     // call the userService http method'
     this.movieService.findByTitle(this.title)
-      .then(data => this.movies = data)
-
+      .subscribe(
+        data=>console.log(data)
+      )
       // capture the User object, subscribe to it and set our User property
-
+    console.log(this.movie.description)
   }
 
 }

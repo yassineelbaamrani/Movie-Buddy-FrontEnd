@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: 'main', component:MainComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'recommend', component: RecommendComponent},
+  { path: 'find', component: FindComponent},
   { path: '**', component: LoginComponent} // this is a Wild Card Route to handle HAS TO BE LAST
 
 ];

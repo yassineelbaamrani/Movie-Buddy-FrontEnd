@@ -1,15 +1,34 @@
-<button type="button" class="btn btn-secondary btn-lg btn-block" placement="left"
-                ngbPopover="Return to the main menu" popoverTitle="POST Request" (click)="goToMain()">
-                Return to Main Page
-            </button>
-<h2>Your Movie Recommendations: </h2>
+<button type="button" class="btn btn-secondary btn-lg btn-block" placement="left" ngbPopover="Return to the main menu"
+    popoverTitle="POST Request" (click)="goToMain()">
+    Return to Main Page
+</button>
+
 <!-- button to click -->
 
 <!-- When I click the button it captures the user input -->
 
 <!-- render the sprite of recommended movies. -->
-<ul>
-    <li>
+<div class="card-body">
 
-    </li>
-</ul>
+    <!-- I want to iterate through all the User elements within the users property of this compoennt and render them -->
+    <h1>Your Movie Recommendations: </h1>   
+    <br /> <br /> <br />
+    <ul *ngFor="let m of movies" class="list-group">
+
+        <li class="list-group-item">
+
+            <img src="https://image.tmdb.org/t/p/w500/{{ m.img }}">
+            <br /><br />
+
+            <b>Title: </b> {{ m.title }} <b> Id: </b> {{ m.tmdb_id }}
+            <br /><br />
+
+            <b>Year:</b> {{ m.year }} <b>Genre:</b> {{ m.genre }} <b>Rating:</b> {{ m.rating }}
+            <br /><br />
+            <b>Description:</b> {{ m.description }}
+            <br />
+
+
+    </ul>
+
+</div>
