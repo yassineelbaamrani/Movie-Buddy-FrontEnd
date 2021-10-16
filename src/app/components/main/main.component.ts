@@ -7,14 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  user_id = localStorage.getItem("user-id");
   title = 'MovieBuddy';
   image = 'assets/moviepng.png'
 
   constructor(private router: Router) { }
 
   // Angular lifecycle hook
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    
+    console.log(this.user_id)
+   }
 
   // we can provide special functionality here that will be called when the compoenent 
   public gotoRegister() {
