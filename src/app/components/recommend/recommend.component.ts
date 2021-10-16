@@ -1,3 +1,6 @@
+import { Movie } from 'src/app/models/movie';
+import { MovieService } from './../../services/movie.service';
+
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -9,32 +12,34 @@ import { Router } from '@angular/router';
 })
 
 export class RecommendComponent implements OnInit {
-  user_id = localStorage.getItem("user-id");
-  constructor( private router:Router) { }
+  user_id:number = JSON.parse(localStorage.getItem("user-id")||'{}');
+  constructor(
+    
+    private router: Router, 
+    private movieService: MovieService) { }
+  public movies: Movie[] = [];
+  movie = new Movie(0, '', '', '', 0, '', '')
+  movie_id = 155
   ngOnInit(): void {
-    function renderHTML(data: any) {
-      for (var i = 0; i < data.results.length; i++) {
-        var imag = new Image();
-        let imgString = "https://image.tmdb.org/t/p/w500/" + data.results[i].poster_path;
-        imag.src = imgString;
-        imag.setAttribute("height", '300');
-
-
-        //this.title.appendChild(imag);
-
-        // movieTitle.innerHTML += "<br />" + "ID: " + data.results[i].id + "<br />" + "Title: " + data.results[i].original_title + "<br />"
-        //     + "Synopsis: " + data.results[i].overview + "<br />" + "<br />";
-
-        var btnn = document.createElement('button');
-        btnn.innerHTML = "Add to my List!";
-        // document.getElementById('title').appendChild(btnn);
-
-        // movieTitle.innerHTML += "<hr />" + "<br />";
-      }
-    }
-
-
+    const movieIdPromise = new Promise((resolve,reject) => {
+      resolve(this.findMovieId())
+    })
+    movieIdPromise.then(()=>this.findMovieRecommendations())
+    console.log(this.movie_id)
   }
+  public findMovieId() {
+    this.movieService.recommendMovieId(this.user_id).subscribe(data => console.log(data))
+  }
+
+  public findMovieRecommendations() {
+    // call the userService http method'
+    this.movieService.recommendMovieList(this.movie_id)
+      .subscribe(
+        data => this.movies = data
+      )
+    // capture the User object, subscribe to it and set our User property
+  }
+
 
   public goToMain() {
 
