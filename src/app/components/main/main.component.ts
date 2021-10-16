@@ -28,7 +28,7 @@ export class MainComponent implements OnInit {
     this.router.navigate(['/all']);
 
   }
-  public gotoFindUser() {
+  public gotoAdd() {
     this.router.navigate(['/find']);
 
   }
