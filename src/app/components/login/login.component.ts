@@ -20,6 +20,11 @@ export class LoginComponent implements OnInit {
   constructor(private userService: UserService, private router:Router) { }
 
   ngOnInit(): void {
+    
+  }
+  public gotoRegister() {
+    this.router.navigate(['/register']);
+
   }
 
   public login() {
@@ -29,6 +34,7 @@ export class LoginComponent implements OnInit {
       
         data => {
           if (this.user.password==data.password){
+            
           this.clientMessage.message = `Successful login ${data.username}`,   // console.log(`successfully logged in ${data.firstName}`)
           this.router.navigate(['/main']);}
           else{

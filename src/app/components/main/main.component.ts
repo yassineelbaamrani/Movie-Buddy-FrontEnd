@@ -37,6 +37,10 @@ export class MainComponent implements OnInit {
     this.router.navigate(['/login']);
 
   }
+  public gotoRecommend() {
+    this.router.navigate(['/recommend']);
+
+  }
 
 }
 

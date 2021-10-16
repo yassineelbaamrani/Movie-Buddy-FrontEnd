@@ -23,6 +23,10 @@
                 <div *ngIf="clientMessage.message.length > 0" class="alert alert-success" role="alert"> {{
                     clientMessage.message }}
                 </div>
+                <button type="button" class="bg-gradient btn btn-lg btn-primary mt-3 pe-5 ps-5 shadow text-light w-100" placement="right"
+                ngbPopover="Register" popoverTitle="GET Request" (click)="gotoRegister()">
+                Register New User
+            </button>
             </form>
         </div>
     </div>

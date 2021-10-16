@@ -11,12 +11,7 @@
         <img src={{image}} alt="User Network" class="mx-auto d-block">
 
         <div class="list-group">
-            
-             <!-- https://www.geeksforgeeks.org/angular-ng-bootstrap-popover-component/ -->
-            <button type="button" class="btn btn-secondary btn-lg btn-block" placement="right"
-                ngbPopover="Query all Users from the database" popoverTitle="GET Request" (click)="gotoAll()">
-                View All Users
-            </button>
+    
 
             <button type="button" class="btn btn-secondary btn-lg btn-block" placement="right"
                 ngbPopover="Login User from the database" popoverTitle="POST Request" (click)="gotoLogin()">
@@ -24,22 +19,9 @@
             </button>
 
             <button type="button" class="btn btn-secondary btn-lg btn-block" placement="right"
-                ngbPopover="Persist a User to the database" popoverTitle="POST Request" (click)="gotoRegister()">
-                Register User
+                ngbPopover="Get Recommendations" popoverTitle="GET Request" (click)="gotoRecommend()">
+                Recommendations
             </button>
-
-
-            <button type="button" class="btn btn-secondary btn-lg btn-block" placement="right"
-                ngbPopover="Query User from the database by extracting path variable" popoverTitle="GET Request" (click)="gotoFindUser()">
-                Find User by Username
-            </button>
-
-
-            <button type="button" class="btn btn-secondary btn-lg btn-block" placement="right"
-                ngbPopover="Delete User from the database" popoverTitle="DELETE Request" (click)="gotoRemoveUser()">
-                Remove User
-            </button>
-
 
         </div>
 

@@ -6,17 +6,16 @@ import { MainComponent } from './components/main/main.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FindComponent } from './components/find/find.component';
+import { RecommendComponent } from './components/recommend/recommend.component';
 
 const routes: Routes = [
 
   // all of these components will be rendered at url localhost:4200/x -> wherever the <routeroutlet> is placed
   { path: '', component: LoginComponent },
-  { path: 'main', component: MainComponent },   // the path specifies http:/localhost:4200/main
   { path: 'login',component: LoginComponent},
+  {path: 'main', component:MainComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'all', component: AllComponent},
-  { path: 'find', component: FindComponent},
-  { path: 'remove', component: RemoveComponent},
+  { path: 'recommend', component: RecommendComponent},
   { path: '**', component: LoginComponent} // this is a Wild Card Route to handle HAS TO BE LAST
 
 ];
