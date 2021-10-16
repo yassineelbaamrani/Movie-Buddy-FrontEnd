@@ -1,6 +1,7 @@
-import { UserService } from './../../services/user.service';
+import { Movie } from 'src/app/models/movie';
+import { MovieService } from './../../services/movie.service';
+import { ClientMessage } from './../../models/client-message';
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-find',
@@ -9,19 +10,19 @@ import { User } from 'src/app/models/user';
 })
 export class FindComponent {
 
-  title = "Find User"
-  userId: number = 0; // initialize to zero, then it will be updated 
-  username: string = '';
-  user = new User(0, '', '', '', '', '', [])
+  title = "Find Movies"
+  public movies: Movie[] = [];
+
+  public clientMessage: ClientMessage = new ClientMessage('Sorry, no movies to display...');
 
   // inject UserService into this class
-  constructor(private userService: UserService) { }
+  constructor(private movieService: MovieService) { }
 
-  public findUserByUsername() {
+  public findMovieByTitle() {
 
     // call the userService http method'
-    this.userService.findByUsername(this.username)
-      .subscribe(data => this.user = data)
+    this.movieService.findByTitle(this.title)
+      .then(data => this.movies = data)
 
       // capture the User object, subscribe to it and set our User property
 
