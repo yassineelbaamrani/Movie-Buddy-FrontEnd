@@ -53,7 +53,7 @@ export class MainComponent implements OnInit {
 
   }
   public movieList() {
-    this.movieService.movieList(1)
+    this.movieService.movieList(this.user_id_num)
       .subscribe(
         data=> this.movies=data)
   }
