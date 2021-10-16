@@ -33,6 +33,9 @@ export class MovieService {
   public recommendMovieId(user_id:number):Observable<Movie>{
     return this.http.get<Movie>(`http://localhost:5000/api/movies/recommend/${user_id}`)
   }
+  public movieList(user_id:number):Observable<Movie[]>{
+    return this.http.get<Movie[]>(`http://localhost:5000/api/movies/list/${user_id}`)
+  }
 
 
   private formatMovie(movie: any): Movie {
