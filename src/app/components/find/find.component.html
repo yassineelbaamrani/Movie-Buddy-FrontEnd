@@ -7,7 +7,7 @@
 
         <div>
           <div>
-              <h2 class="card-header text-center">{{ title }}</h2> <!-- add the title property!-->
+              <h2 class="card-header text-center">Find Movies</h2> <!-- add the title property!-->
           </div>
       
           <div class="card-body">
@@ -24,17 +24,30 @@
                 <button class="btn btn-secondary" (click)="findMovieByTitle()">Find</button>
       
                 <!-- I want to iterate through all the User elements within the users property of this compoennt and render them -->
+                <br /> <br /> <br />
+                
+                <div *ngIf="movies.length > 0">
+                <input [(ngModel)]="tmdb_id" name="tmdb_id" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                <button class="btn btn-secondary" (click)="addMovie()">Add Movie To List Using TMDB ID</button>
+                <br /> <br />
+                </div>
+
                 <ul *ngFor="let m of movies" class="list-group">
-      
-                  <li class="list-group-item">Id: {{ m.tmdb_id }}</li>
-                  <li class="list-group-item">Title: {{ m.title }}</li>
-                  <li class="list-group-item">Year: {{ m.year }}</li>
-                  <li class="list-group-item">Genre: {{ m.genre }}</li>
-                  <li class="list-group-item">Rating: {{ m.rating }}</li>
-                  <li class="list-group-item">Description: {{ m.description }}</li>
-                  <li class="list-group-item">{{ m.img }}</li>
-      
-                </ul>
+
+                <li class="list-group-item">
+
+                    <img src="https://image.tmdb.org/t/p/w500/{{ m.img }}">
+                    <br /><br />
+
+                    <b>Title: </b> {{ m.title }} <b> Id: </b> {{ m.tmdb_id }}
+                    <br /><br />
+
+                    <b>Year:</b> {{ m.year }} <b>Genre:</b> {{ m.genre }} <b>Rating:</b> {{ m.rating }}
+                    <br /><br />
+                    <b>Description:</b> {{ m.description }}
+                    <br />
+
+                    </ul>
       
           </div>
       
