@@ -34,7 +34,8 @@ export class LoginComponent implements OnInit {
       
         data => {
           if (this.user.password==data.password){
-            
+          localStorage.setItem("user-id",data.id.toString());   
+          console.log(localStorage.getItem("user-id"));
           this.clientMessage.message = `Successful login ${data.username}`,   // console.log(`successfully logged in ${data.firstName}`)
           this.router.navigate(['/main']);}
           else{
