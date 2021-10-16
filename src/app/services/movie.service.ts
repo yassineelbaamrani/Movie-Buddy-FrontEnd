@@ -20,12 +20,18 @@ export class MovieService {
 
   // GET
   public findByTitle(title: string): Observable<Movie[]> {
-    console.log(`${search}${title}`)
-    return this.http.get<Movie[]>(`${search}${title}`) 
+    console.log(`http://localhost:5000/api/movies/find/${title}`)
+    return this.http.get<Movie[]>(`http://localhost:5000/api/movies/find/${title}`) 
     .pipe(
       catchError(this.handleError)
     )
   }
+
+  public addMovie(tmdb_id: string): Boolean {
+    console.log(tmdb_id);
+    return true;
+  }
+
   public recommendMovieList(movie_id:number): Observable<Movie[]>{
     return this.http.get<Movie[]>(`http://localhost:5000/api/movies/recommended/${movie_id}`)
     //.pipe( catch(this.handleError)

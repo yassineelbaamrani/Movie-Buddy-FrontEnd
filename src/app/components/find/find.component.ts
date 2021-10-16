@@ -10,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FindComponent {
 
-  title = "Find Movies"
+  title = ""
+  tmdb_id = ""
   public movies: Movie[] = [];
   movie = new Movie(0,'','','',0,'','')
   public clientMessage: ClientMessage = new ClientMessage('Sorry, no movies to display...');
@@ -23,10 +24,14 @@ export class FindComponent {
     // call the userService http method'
     this.movieService.findByTitle(this.title)
       .subscribe(
-        data=>console.log(data)
+        data=>this.movies = data
       )
       // capture the User object, subscribe to it and set our User property
-    console.log(this.movie.description)
+    console.log(this.movies)
+  }
+
+  public addMovie() {
+    this.movieService.addMovie(this.tmdb_id)
   }
 
 }
