@@ -30,8 +30,8 @@ export class MovieService {
     return this.http.get<Movie[]>(`http://localhost:5000/api/movies/recommended/${movie_id}`)
     //.pipe( catch(this.handleError)
   }
-  public recommendMovieId(user_id:number):Observable<number>{
-    return this.http.get<number>(`http://localhost:5000/api/movies/recommend/${user_id}`)
+  public recommendMovieId(user_id:number):Observable<Movie>{
+    return this.http.get<Movie>(`http://localhost:5000/api/movies/recommend/${user_id}`)
   }
 
 

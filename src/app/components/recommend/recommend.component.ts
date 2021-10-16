@@ -1,6 +1,6 @@
 import { Movie } from 'src/app/models/movie';
 import { MovieService } from './../../services/movie.service';
-
+import { ClientMessage } from './../../models/client-message';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -18,26 +18,32 @@ export class RecommendComponent implements OnInit {
     private router: Router, 
     private movieService: MovieService) { }
   public movies: Movie[] = [];
-  movie = new Movie(0, '', '', '', 0, '', '')
-  movie_id = 155
+  movie = new Movie(155, '', '', '', 0, '', '')
+  public clientMessage = new ClientMessage('');
+
+
   ngOnInit(): void {
     const movieIdPromise = new Promise((resolve,reject) => {
-      resolve(this.findMovieId())
+      resolve(this.findMovieRecommendations())
     })
-    movieIdPromise.then(()=>this.findMovieRecommendations())
-    console.log(this.movie_id)
+    movieIdPromise.then(()=>this.findMovieId())
+    console.log(this.movie.tmdb_id)
   }
-  public findMovieId() {
-    this.movieService.recommendMovieId(this.user_id).subscribe(data => console.log(data))
-  }
+  
 
   public findMovieRecommendations() {
     // call the userService http method'
-    this.movieService.recommendMovieList(this.movie_id)
+    this.movieService.recommendMovieList(this.movie.tmdb_id)
       .subscribe(
         data => this.movies = data
       )
     // capture the User object, subscribe to it and set our User property
+  }
+  public findMovieId() {
+    this.movieService.recommendMovieId(this.user_id)
+    .subscribe(
+      data => this.movie = data
+      )
   }
 
 
