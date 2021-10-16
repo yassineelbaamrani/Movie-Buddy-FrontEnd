@@ -20,29 +20,27 @@ export class RecommendComponent implements OnInit {
   public movies: Movie[] = [];
   movie = new Movie(155, '', '', '', 0, '', '')
   public clientMessage = new ClientMessage('');
+  movie_id = 155
 
 
   ngOnInit(): void {
-    const movieIdPromise = new Promise((resolve,reject) => {
-      resolve(this.findMovieRecommendations())
-    })
-    movieIdPromise.then(()=>this.findMovieId())
-    console.log(this.movie.tmdb_id)
+    this.findMovieRecommendations()
   }
   
 
   public findMovieRecommendations() {
     // call the userService http method'
-    this.movieService.recommendMovieList(this.movie.tmdb_id)
+    this.movieService.recommendMovieList(this.user_id)
       .subscribe(
-        data => this.movies = data
+        data => this.movies = data 
       )
+
     // capture the User object, subscribe to it and set our User property
   }
   public findMovieId() {
     this.movieService.recommendMovieId(this.user_id)
     .subscribe(
-      data => this.movie = data
+      data => console.log(data)
       )
   }
 
