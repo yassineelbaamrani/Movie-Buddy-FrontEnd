@@ -2,7 +2,16 @@
     popoverTitle="POST Request" (click)="goToMain()">
     Return to Main Page
 </button>
-
+<br />
+<br />
+<div *ngIf="movies.length > 0">
+    <input [(ngModel)]="tmdb_id" name="tmdb_id" type="text" maxlength="10" size="10">
+    <button class="btn btn-secondary" (click)="addMovie()">Add Movie To List Using TMDB ID</button>&nbsp;
+    <div *ngIf="clientMessage.message.length > 0" class="alert alert-success" role="alert"> {{
+        clientMessage.message }}
+    </div>
+    <br /> <br />
+</div>
 <!-- button to click -->
 
 <!-- When I click the button it captures the user input -->
@@ -10,8 +19,8 @@
 <!-- render the sprite of recommended movies. -->
 <div class="card-body">
 
-    <!-- I want to iterate through all the User elements within the users property of this compoennt and render them -->
-    <h1>Your Movie Recommendations: </h1>   
+    <!-- I want to iterate through all the Movie elements within the movies property of this compoennt and render them -->
+    <h1>Your Movie Recommendations: </h1>
     <br /> <br /> <br />
     <ul *ngFor="let m of movies" class="list-group">
 

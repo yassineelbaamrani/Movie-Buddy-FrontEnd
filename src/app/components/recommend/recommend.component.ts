@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 
 export class RecommendComponent implements OnInit {
   user_id:number = JSON.parse(localStorage.getItem("user-id")||'{}');
+  tmdb_id = 'Input Movie Id'
   constructor(
     
     private router: Router, 
@@ -49,5 +50,15 @@ export class RecommendComponent implements OnInit {
 
 
     this.router.navigate(['/main']);
+  }
+  public addMovie() {
+    this.clientMessage.message = '';
+    this.movieService.addMovie(this.tmdb_id, this.user_id) // plus uid
+    .subscribe(
+      data => { if (data == true) {
+        this.clientMessage.message = 'Movie successfully added to list!';
+      }
+      })
+    this.tmdb_id = 'Input Movie Id';
   }
 }
