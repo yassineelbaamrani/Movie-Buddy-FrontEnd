@@ -15,5 +15,5 @@ RUN npm run build --prod
 FROM nginx:1.15.8-alpine
 
 #we pass our distributal artifact to Nginx to host
-COPY --from=builder /usr/src/app/dist/movie-buddy/ /usr/share/nginx/html
+COPY --from=builder /usr/src/app/dist/rest-api-ui/ /usr/share/nginx/html
 
