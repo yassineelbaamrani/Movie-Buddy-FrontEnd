@@ -8,16 +8,46 @@ img {
 button {
     margin-bottom: 1%;
 }
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-  }
-  .center {
-    text-align: center
-   }
+    color: white;
+    text-align: center;
+}
+.center-text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    color: white;
+    text-align: center;
+    padding: 100px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 
-   ul{
-       font-size: 30px;
-   }
+}
+
+
+ul {
+    font-size: 30px;
+}
+
+li {
+    display: flex
+}
+
+.card-header {
+    background-color: slategrey;
+    color: white;
+    border: 15px solid black;
+    margin: 20px;
+    padding: 20px;
+    font-size: 300%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.list-group-item {
+    background-color: #444444;
+}
