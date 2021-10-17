@@ -24,11 +24,16 @@
                 <button class="btn btn-secondary" (click)="findMovieByTitle()">Find</button>
       
                 <!-- I want to iterate through all the User elements within the users property of this compoennt and render them -->
-                <br /> <br /> <br />
+                <br /> <br />
                 
                 <div *ngIf="movies.length > 0">
                 <input [(ngModel)]="tmdb_id" name="tmdb_id" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-                <button class="btn btn-secondary" (click)="addMovie()">Add Movie To List Using TMDB ID</button>
+                <button class="btn btn-secondary" (click)="addMovie()">Add Movie To List Using TMDB ID</button>&nbsp;
+                <button type="button" class="btn btn-secondary" placement="left" ngbPopover="Return to the main menu"
+                    popoverTitle="POST Request" (click)="goToMain()">Return to Main Page</button>
+                    <div *ngIf="clientMessage.message.length > 0" class="alert alert-success" role="alert"> {{
+                      clientMessage.message }}
+                  </div>
                 <br /> <br />
                 </div>
 

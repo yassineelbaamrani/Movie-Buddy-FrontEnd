@@ -27,9 +27,11 @@ export class MovieService {
     )
   }
 
-  public addMovie(tmdb_id: string): Boolean {
-    console.log(tmdb_id);
-    return true;
+  public addMovie(tmdb_id: string, user_id: number): Observable<Boolean> {
+    return this.http.get<Boolean>(`http://localhost:5000/api/movies/add/${user_id}&${tmdb_id}`)
+      .pipe(
+        catchError(this.handleError)
+      )
   }
 
   public recommendMovieList(movie_id:number): Observable<Movie[]>{

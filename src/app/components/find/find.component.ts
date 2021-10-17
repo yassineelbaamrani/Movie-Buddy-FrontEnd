@@ -1,6 +1,7 @@
 import { Movie } from 'src/app/models/movie';
 import { MovieService } from './../../services/movie.service';
 import { ClientMessage } from './../../models/client-message';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,14 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FindComponent {
 
+  user_id:number = JSON.parse(localStorage.getItem("user-id")||'{}');
   title = ""
   tmdb_id = ""
   public movies: Movie[] = [];
   movie = new Movie(0,'','','',0,'','')
-  public clientMessage: ClientMessage = new ClientMessage('Sorry, no movies to display...');
+  public clientMessage: ClientMessage = new ClientMessage('');
 
   // inject MovieService into this class
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService, private router: Router) { }
 
   public findMovieByTitle() {
 
@@ -28,10 +30,22 @@ export class FindComponent {
       )
       // capture the User object, subscribe to it and set our User property
     console.log(this.movies)
+    this.title = '';
   }
 
   public addMovie() {
-    this.movieService.addMovie(this.tmdb_id)
+    this.clientMessage.message = '';
+    this.movieService.addMovie(this.tmdb_id, this.user_id) // plus uid
+    .subscribe(
+      data => { if (data == true) {
+        this.clientMessage.message = 'Movie successfully added to list!';
+      }
+      })
+    this.tmdb_id = '';
+  }
+
+  public goToMain() {
+    this.router.navigate(['/main']);
   }
 
 }
