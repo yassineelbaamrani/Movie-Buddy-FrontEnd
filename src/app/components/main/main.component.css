@@ -8,3 +8,16 @@ img {
 button {
     margin-bottom: 1%;
 }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .center {
+    text-align: center
+   }
+
+   ul{
+       font-size: 30px;
+   }

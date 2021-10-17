@@ -27,17 +27,17 @@
             ngbPopover="Add Movies to Your List" popoverTitle="Post Request" (click)="gotoAdd()">
             Add Movies to Your List
             </button>
-
-            <h1>Your Movies: </h1>   
-            <br /> <br /> <br />
+            <br />
+            <h1 class="center"><u>Your Movies</u> </h1>   
+            <br /> <br />
             <ul *ngFor="let m of movies" class="list-group">
 
                 <li class="list-group-item">
-        
-                    <img src="https://image.tmdb.org/t/p/w500/{{ m.img }}">
-                    <br /><br />    
-                    <b>Title: </b> {{ m.title }} 
-                    <br /><br />
+         
+                    <img src="https://image.tmdb.org/t/p/w500/{{ m.img }}" alt="Movie" class ="center" style= "width:125px;height:200px;">
+                    <br />  
+                    <b class="center"> {{ m.title }}  </b>
+                    <br />
         
         
             </ul>
