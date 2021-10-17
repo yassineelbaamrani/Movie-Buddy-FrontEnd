@@ -30,7 +30,7 @@ export class RegisterComponent {
     // call this.userService.registerUser() method and post it
     this.userService.registerUser(this.user)
       .subscribe( // subscribe to the data returned and do something like generate client message
-        data => {this.clientMessage.message = `Successfully registered ${data.firstName}`, this.router.navigate(['/main']);},   // console.log(`successfully added ${data.firstName}`)
+        data => {this.clientMessage.message = `Successfully registered ${data.firstName}`, this.router.navigate(['/login']);},   // console.log(`successfully added ${data.firstName}`)
         error => this.clientMessage.message = `Something went wrong. Error: ${error}` // console.error(`We got an error: ${error}` 
       )
     
