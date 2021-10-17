@@ -8,7 +8,7 @@ import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { Router } from '@angular/router';
 
-const localURL= `http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com/`
+const localURL= `http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com`
 const url = `${awsUrl}/users`;
 
 // we will inject this service into the components that call its methods
@@ -43,7 +43,7 @@ export class UserService { // this service is only responsible for one thing: ma
   //user find my username of example, ifstatement to compare is password inputted is equal to password associated with user found by username passed in if user doesnt exist reroute back to same page and say login failed.
   //return password to check validity make change
   public login(username: string, password: string): Observable<User> {
-    return this.http.get<User>(`${localURL}find/${username}`)
+    return this.http.get<User>(`${localURL}/find/${username}`)
       .pipe(catchError(this.handleError));
      
 
