@@ -34,7 +34,7 @@ export class UserService { // this service is only responsible for one thing: ma
     // my Spring controller accepts post requests at http://api-env.eba-udukpxjr.us-east-2.elasticbeanstalk.com/api/users/add
     
     
-    return this.http.post<User>(`${localURL}add`, user, this.httpOptions) // url, user, this.httpOptions
+    return this.http.post<User>(`${localURL}/add/`, user) // url, user, this.httpOptions
       .pipe( // we are calling a method on the data returned in the observable
         catchError(this.handleError) // passing a callback
       )
