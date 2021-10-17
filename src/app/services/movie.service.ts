@@ -11,6 +11,7 @@ const imgpath = "http://image.tmdb.org/t/p/w92"
 const requestUrl = "https://api.themoviedb.org/3/movie/"
 const requestUrl2 = "/recommendations?api_key=4e03597f829ab368d49ae4a8f0769033&language=en-US"
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,29 +21,35 @@ export class MovieService {
 
   // GET
   public findByTitle(title: string): Observable<Movie[]> {
-    console.log(`http://localhost:5000/api/movies/find/${title}`)
-    return this.http.get<Movie[]>(`http://localhost:5000/api/movies/find/${title}`) 
+    console.log(`http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com/
+    /api/movies/find/${title}`)
+    return this.http.get<Movie[]>(`http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com/
+    /api/movies/find/${title}`) 
     .pipe(
       catchError(this.handleError)
     )
   }
 
   public addMovie(tmdb_id: string, user_id: number): Observable<Boolean> {
-    return this.http.get<Boolean>(`http://localhost:5000/api/movies/add/${user_id}&${tmdb_id}`)
+    return this.http.get<Boolean>(`http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com/
+    /api/movies/add/${user_id}&${tmdb_id}`)
       .pipe(
         catchError(this.handleError)
       )
   }
 
   public recommendMovieList(movie_id:number): Observable<Movie[]>{
-    return this.http.get<Movie[]>(`http://localhost:5000/api/movies/recommended/${movie_id}`)
+    return this.http.get<Movie[]>(`http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com/
+    /api/movies/recommended/${movie_id}`)
     //.pipe( catch(this.handleError)
   }
   public recommendMovieId(user_id:number):Observable<Movie>{
-    return this.http.get<Movie>(`http://localhost:5000/api/movies/recommend/${user_id}`)
+    return this.http.get<Movie>(`http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com/
+/api/movies/recommend/${user_id}`)
   }
   public movieList(user_id:number):Observable<Movie[]>{
-    return this.http.get<Movie[]>(`http://localhost:5000/api/movies/list/${user_id}`)
+    return this.http.get<Movie[]>(`http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com/
+/api/movies/list/${user_id}`)
   }
 
 
