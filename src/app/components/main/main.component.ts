@@ -12,7 +12,7 @@ export class MainComponent implements OnInit {
   user_id = localStorage.getItem("user-id") || '{}';
   user_id_num: number = +this.user_id;
   title = 'MovieBuddy';
-  //image = 'https://mpng.subpng.com/20180211/exw/kisspng-photographic-film-movie-projector-cinema-vintage-retro-movie-projector-silhouette-assignmen-5a80f80fa2ff89.7202684015184015516677.jpg'
+  image = 'https://www.nicepng.com/png/full/33-336008_movie-camera-png-old-video-camera-png.png'
 
   constructor(
     private router: Router,
