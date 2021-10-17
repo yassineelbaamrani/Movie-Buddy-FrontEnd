@@ -8,8 +8,9 @@ import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { Router } from '@angular/router';
 
-const localURL= `http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com`
-const url = `${awsUrl}/users`;
+const localURL= `http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com/api/users`
+const url = `http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com
+/api/users`;
 
 // we will inject this service into the components that call its methods
 // within their methods
