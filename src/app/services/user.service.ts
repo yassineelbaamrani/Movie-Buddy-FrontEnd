@@ -8,7 +8,7 @@ import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { Router } from '@angular/router';
 
-const localURL= `http://localhost:5000/api/users/`
+const localURL= `http://moviebuddy-env.eba-tnrhbgxj.us-east-2.elasticbeanstalk.com/`
 const url = `${awsUrl}/users`;
 
 // we will inject this service into the components that call its methods
