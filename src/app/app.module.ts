@@ -14,6 +14,7 @@ import { FindComponent } from './components/find/find.component';
 import { RemoveComponent } from './components/remove/remove.component';
 import { LoginComponent } from './components/login/login.component';
 import { RecommendComponent } from './components/recommend/recommend.component';
+import { BuddyComponent } from './components/buddy/buddy.component';
 
 // ANgular is MODULAR! organizes views and functionality in different files/directorys
 // when we ng server the app, the webpack traverses our application an identifies dependencies
@@ -29,7 +30,8 @@ import { RecommendComponent } from './components/recommend/recommend.component';
     FindComponent,
     RemoveComponent,
     LoginComponent,
-    RecommendComponent
+    RecommendComponent,
+    BuddyComponent
   ],
   imports: [ // defines libraries that are accessible to component within our app
     BrowserModule,

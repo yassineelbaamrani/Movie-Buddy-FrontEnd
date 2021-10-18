@@ -52,6 +52,11 @@ export class MainComponent implements OnInit {
     this.router.navigate(['/recommend']);
 
   }
+
+  public gotoBuddy(){
+    this.router.navigate(['/buddy']);
+
+  }
   public movieList() {
     this.movieService.movieList(this.user_id_num)
       .subscribe(
