@@ -1,27 +1,33 @@
-# RestApiUi
+# MovieBuddy
+The Movie Buddy app will leverage the power of the RESTful “The Movie Database API” to make for a fun way to track your taste in movies. The app will allow users to register, login, select favourite movies and genres. After a portfolio has been made to reflect the user’s taste, the app will recommend new movies to watch as well as other users with which they can connect, based on a comparison of both user’s tastes in movies. Our goal with this app is to provide an engaging user experience while leveraging both front end and back end technologies that we have learned about throughout our Revature training.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
 
-## Development server
+# team4-p2
+Project 2 repo for team 4
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Project-2 Requirements
+Within groups of 4, you are required to develop an application using the following mandatory technologies.
+#### Presentation Date: Monday Oct 18th, 2021
+You will present this application as if you were pitching it to a board or to investors.
+When you're presenting, you're welcome to provide a brief slideshow demonstrating the technologies involved in the app, it's features, and the Agile Development Process you undewent to develop it.
 
-## Build
+## Required Technologies for RESTful Wep Application
+- Spring Boot (With Spring Data and Spring Web)
+- Angular
+- Consume a RESTful API
+- Amazon RDS
+- AWS CodePipeline for CI/CD
+- GitHub (*Each team must maintain a repository to which all members contribute*)
+- Unit Tests & Logging
+- Roadmap Presentation
+  > Present your app with a slide show (Roadmap) and talk us through any extra technologies you implemented either within your application or to track the progress of your sprint.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Required User Stories
+- Login/Logout
+- Register
+- Anything else
 
-## Running unit tests
+<br>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
